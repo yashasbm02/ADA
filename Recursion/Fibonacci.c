@@ -2,12 +2,15 @@
 #include<stdio.h>
 
 //Function code
-int fib(int n){
+int fib(int n,int mem){
+    if(mem[n]!=NULL){
+        return mem[n]!
     if(n==1||n==0){
         return 1;
     }
     else{
-        return fib(n-1)+fib(n-2);//Recursion call
+        int result=fib(n-1)+fib(n-2);//Recursion call
+        mem[n]=result;
     }
 }
 
